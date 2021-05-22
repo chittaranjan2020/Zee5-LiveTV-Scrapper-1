@@ -1,45 +1,54 @@
 {
-    "name": "Torrent Search Bot by @chittaranjan2020",
-    "description": "A Simple Telegram Inline Zee5 live TV stream Bot in Pyrogram by @chittaranjan2020",
-    "keywords": [
-        "telegram",
-        "inline",
-        "torrent",
-        "search",
-        "bot"
-    ],
-    "repository": "https://github.com/chittaranjan2020/Zee5-LiveTV-Scrapper",
-    "website": "https://telegram.dog/Zee5streambot",
-    "success_url": "https://github.com/chittaranjan2020/Zee5-LiveTV-Scrapper",
-    "env": {
-        "API_ID": {
-            "description": "Get this value from my.telegram.org or @TeleORG_Bot"
-        },
-        "API_HASH": {
-            "description": "Get this value from my.telegram.org or @TeleORG_Bot"
-        },
-        "SESSION_NAME": {
-            "description": "Any Bot Session Name. You can keep default!",
-            "value": "Torrent-Search-Bot"
-        },
-        "BOT_TOKEN": {
-            "description": "Your Telegram Bot Token by @BotFather"
-        },
-        "MAX_INLINE_RESULTS": {
-            "description": "Max Telegram Inline Search Result. Keep Default!",
-            "value": "50",
-            "required": false
-        }
+  "name": "Zee5 live TV scrapper",
+  "description": "Zee5 Downloader",
+  "keywords": [
+    "telegram",
+    "zee5",
+    "downloader"
+  ],
+
+  "repository": "https://github.com/chittaranjan2020/Zee5-LiveTV-Scrapper",
+  
+  "env": {
+    "WEBHOOK": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "value": "ANYTHING"
     },
-    "buildpacks": [
-        {
-            "url": "heroku/python"
-        }
-    ],
-    "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "free"
-        }
+    "TG_BOT_TOKEN": {
+      "description": "Your bot token, as a string.",
+      "value": ""
+    },
+    "APP_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "AUTH_USERS": {
+      "description": "allow only pre-defined users to use this bot",
+      "value": "680815375"
+    },
+    "BANNED_USERS": {
+      "description": "Banned Unwanted members..",
+      "value": "",
+      "required": false
     }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+        "options": {
+          "version": "12"
+        }
+      }
+  ],
+  "stack": "container",
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
 }
