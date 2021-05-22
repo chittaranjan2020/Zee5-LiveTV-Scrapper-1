@@ -23,3 +23,6 @@
 <h2> Where To Host : </h2>
 
 <h5 align="center"> Copy The index.php code and Host on repl.it <br> or Your Hosting Otherwise Use https://zee.avipatilpro.repl.c
+
+ [![Deploy]
+  (https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
